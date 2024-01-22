@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CSC_455_Assignment_1 {
 	class MyFunctions {
@@ -40,7 +41,7 @@ namespace CSC_455_Assignment_1 {
 			// create list, temporary string, and counter for the user
 			List<string> dinos = new List<string>();
 			int counter = 1;
-			string locum = "";
+			string locum = string.Empty;
 
 			// thoroughness for the people -_-
 			while (locum != "done" && locum != "Done" && locum != "<done>" && locum != "<Done>") {
@@ -59,43 +60,49 @@ namespace CSC_455_Assignment_1 {
 			Console.WriteLine($"{sortedDinos[counter]}\n");
 		}
 		private static void ClassFun() {
+			// doing stuff with strings, so lets input one
 			Console.WriteLine("Please input a string:\n");
+			reader:
 			var given = Console.ReadLine();
+			if (given.Length < 4) {
+				Console.WriteLine("Please give a bigger string:\n");
+				goto reader;
+			}
 
-			int choser = RandomNum(10);
+			int choser = RandomNum(10); // random 1-10
 
 			switch (choser) {
 				case 1:
-
+					Console.WriteLine($"{given.Substring(0, given.Length - 2)}");
 					break;
 				case 2:
-
+					Console.WriteLine($"{}");
 					break;
 				case 3:
-
+					Console.WriteLine($"{}");
 					break;
 				case 4:
-
+					Console.WriteLine($"{}");
 					break;
 				case 5:
-
+					Console.WriteLine($"{}");
 					break;
 				case 6:
-
+					Console.WriteLine($"{}");
 					break;
 				case 7:
-
+					Console.WriteLine($"{}");
 					break;
 				case 8:
-
+					Console.WriteLine($"{}");
 					break;
 				case 9:
-
+					Console.WriteLine($"{}");
 					break;
 				case 10:
-
+					Console.WriteLine($"{}");
 					break;
-				default:
+				default: // if somehow, we get a number outside of 1-10. Error code 2
 					Console.WriteLine("Internal Error.\nCode: 2");
 					break;
 			}
