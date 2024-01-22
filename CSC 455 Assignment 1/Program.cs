@@ -27,7 +27,7 @@ namespace CSC_455_Assignment_1 {
 			// print today's date in MM-DD-YYYY format
 			// this is my preferred method of printing the date
 
-			Console.WriteLine($"{DateTime.Now.ToString("MM-DD-YYYY")}");
+			Console.WriteLine($"{DateTime.Now.ToString("MM-dd-yyyy")}");
 		}
 		private static void DinoLister () {
 			Console.WriteLine("Please give me at least 10 Dinosaur names. Write <done> to finish:\n");
@@ -52,6 +52,9 @@ namespace CSC_455_Assignment_1 {
 			counter = MyFunctions.RandomNum(dinos.Count);
 			Console.WriteLine($"{dinos[counter]}\n");
 		}
+		private static void ClassFun() {
+
+		}
 		public static void DoMenu (int choice) {
 			switch (choice) {
 				case 1: // print the random number
@@ -67,7 +70,7 @@ namespace CSC_455_Assignment_1 {
 					Console.ReadLine();
 					break;
 				case 4: // string class
-
+					ClassFun();
 					Console.ReadLine();
 					break;
 				default: // if the choice was not valid
