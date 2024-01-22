@@ -51,17 +51,56 @@ namespace CSC_455_Assignment_1 {
 			}
 			Console.WriteLine("\n");
 
-			dinos.Sort();
+			var sortedDinos = dinos.OrderBy(dino => dino).ToList();
 
 			// call the random number method
 			// repurpose the counter int, make sure the index is correct
-			counter = RandomNum(dinos.Count) - 1;
-			Console.WriteLine($"{dinos[counter]}\n");
+			counter = RandomNum(sortedDinos.Count) - 1;
+			Console.WriteLine($"{sortedDinos[counter]}\n");
 		}
 		private static void ClassFun() {
+			Console.WriteLine("Please input a string:\n");
+			var given = Console.ReadLine();
 
+			int choser = RandomNum(10);
+
+			switch (choser) {
+				case 1:
+
+					break;
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+
+					break;
+				case 5:
+
+					break;
+				case 6:
+
+					break;
+				case 7:
+
+					break;
+				case 8:
+
+					break;
+				case 9:
+
+					break;
+				case 10:
+
+					break;
+				default:
+					Console.WriteLine("Internal Error.\nCode: 2");
+					break;
+			}
 		}
-		public static void DoMenu (int choice) {
+		private static void DoMenu (int choice) {
 			switch (choice) {
 				case 1: // print the random number
 					Console.WriteLine($"{RandomNum(10)}\n");
@@ -81,7 +120,7 @@ namespace CSC_455_Assignment_1 {
 					break;
 				default: // if the choice was not valid
 					Console.WriteLine("Invalid choice.\n");
-					PrintMenu(); 
+					PrintMenu();
 					// this could potentially lead down a rabbit hole of returns
 					// however, since there is nothing after to process, this should be fine
 					break;
@@ -90,7 +129,7 @@ namespace CSC_455_Assignment_1 {
 	}
 	internal class Program {
 		static void Main (string[] args) {
-			MyFunctions.PrintMenu(); // print the menu
+			MyFunctions.PrintMenu(); // print and run the menu (do everything)
 		}
 	}
 }
