@@ -49,6 +49,7 @@ namespace CSC_455_Assignment_1 {
 				dinos.Add(locum);
 				counter++;
 			}
+			Console.WriteLine("\n");
 
 			dinos.Sort();
 
