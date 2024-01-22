@@ -45,8 +45,15 @@ namespace CSC_455_Assignment_1 {
 
 			// thoroughness for the people -_-
 			while (locum != "done" && locum != "Done" && locum != "<done>" && locum != "<Done>") {
+				looper:
 				Console.WriteLine($"{counter}: ");
 				locum = Console.ReadLine();
+				
+				//make sure they give 10
+				if ((locum == "done" || locum == "Done" || locum == "<done>" || locum == "<Done>") && counter < 11) {
+					Console.WriteLine("Please complete the list.\n");
+					goto looper;
+				}
 				dinos.Add(locum);
 				counter++;
 			}
