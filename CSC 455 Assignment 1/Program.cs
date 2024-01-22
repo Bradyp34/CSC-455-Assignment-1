@@ -14,6 +14,11 @@ namespace CSC_455_Assignment_1 {
 			Console.WriteLine("2: Today's date.\n");
 			Console.WriteLine("3: List of dinosaurs.\n");
 			Console.WriteLine("4: String class methods.\n");
+
+			var locum = Console.ReadLine();
+			int choice = int.Parse(locum);
+
+			DoMenu(choice);
 		}
 		private static int RandomNum (int max) {
 			// make random number 1-10 and return it
@@ -39,7 +44,7 @@ namespace CSC_455_Assignment_1 {
 
 			// thoroughness for the people -_-
 			while (locum != "done" && locum != "Done" && locum != "<done>" && locum != "<Done>") {
-				Console.WriteLine($"{counter.ToString()}: ");
+				Console.WriteLine($"{counter}: ");
 				locum = Console.ReadLine();
 				dinos.Add(locum);
 				counter++;
@@ -48,8 +53,8 @@ namespace CSC_455_Assignment_1 {
 			dinos.Sort();
 
 			// call the random number method
-			// repurpose the counter int
-			counter = MyFunctions.RandomNum(dinos.Count);
+			// repurpose the counter int, make sure the index is correct
+			counter = RandomNum(dinos.Count) - 1;
 			Console.WriteLine($"{dinos[counter]}\n");
 		}
 		private static void ClassFun() {
@@ -75,7 +80,9 @@ namespace CSC_455_Assignment_1 {
 					break;
 				default: // if the choice was not valid
 					Console.WriteLine("Invalid choice.\n");
-					Console.ReadLine();
+					PrintMenu(); 
+					// this could potentially lead down a rabbit hole of returns
+					// however, since there is nothing after to process, this should be fine
 					break;
 			}
 		}
@@ -83,11 +90,6 @@ namespace CSC_455_Assignment_1 {
 	internal class Program {
 		static void Main (string[] args) {
 			MyFunctions.PrintMenu(); // print the menu
-
-			var locum = Console.ReadLine();
-			int choice = int.Parse(locum);
-
-			MyFunctions.DoMenu(choice);
 		}
 	}
 }
