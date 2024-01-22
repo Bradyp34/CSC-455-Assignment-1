@@ -73,22 +73,22 @@ namespace CSC_455_Assignment_1 {
 
 			switch (choser) {
 				case 1:
-					Console.WriteLine($"{given.Substring(0, given.Length - 2)}");
+					Console.WriteLine($"Substring: {given.Substring(0, given.Length - 2)}");
 					break;
 				case 2:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"Reverse: {given.Reverse()}");
 					break;
 				case 3:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"Length: {given.Length}");
 					break;
 				case 4:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"UpperCase: {given.ToUpper()}");
 					break;
 				case 5:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"StartsWith: {given[0]}");
 					break;
 				case 6:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"EndsWith: {given[given.Length - 1]}");
 					break;
 				case 7:
 					Console.WriteLine($"{}");
