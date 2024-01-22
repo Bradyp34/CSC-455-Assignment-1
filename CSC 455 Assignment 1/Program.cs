@@ -20,6 +20,22 @@ namespace CSC_455_Assignment_1 {
 
 			return (RandomNum() % 10) + 1;
 		}
+		public static void DoMenu (int choice) {
+			switch (choice) {
+				case 1: // print the random number
+					Console.WriteLine($"{MyFunctions.RandomNum()}\n");
+					break;
+				case 2: // today's date
+
+					break;
+				case 3: // dinosaur list
+
+					break;
+				case 4: // string class
+
+					break;
+			}
+		}
 	}
 	internal class Program {
 		static void Main (string[] args) {
@@ -28,8 +44,7 @@ namespace CSC_455_Assignment_1 {
 			var locum = Console.ReadLine();
 			int choice = int.Parse(locum);
 
-
-			Console.WriteLine($"{MyFunctions.RandomNum()}\n"); // print the random number
+			MyFunctions.DoMenu(choice);
 		}
 	}
 }
