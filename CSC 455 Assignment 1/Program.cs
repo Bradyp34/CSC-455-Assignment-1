@@ -73,7 +73,7 @@ namespace CSC_455_Assignment_1 {
 
 			switch (choser) {
 				case 1:
-					Console.WriteLine($"Substring: {given.Substring(0, given.Length - 2)}");
+					Console.WriteLine($"Substring: {given.Substring(1, given.Length - 2)}");
 					break;
 				case 2:
 					Console.WriteLine($"Reverse: {given.Reverse()}");
@@ -91,16 +91,17 @@ namespace CSC_455_Assignment_1 {
 					Console.WriteLine($"EndsWith: {given[given.Length - 1]}");
 					break;
 				case 7:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"Replaced s-z: {given.Replace("s", "z")}");
 					break;
 				case 8:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"Split: {given.Substring(0, (given.Length - 1) / 2)}\n" +
+						$"{given.Substring((given.Length / 2) + 1, given.Length - 1)}");
 					break;
 				case 9:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"Trimmed; {given.Trim()}");
 					break;
 				case 10:
-					Console.WriteLine($"{}");
+					Console.WriteLine($"LowerCase: {given.ToLower()}");
 					break;
 				default: // if somehow, we get a number outside of 1-10. Error code 2
 					Console.WriteLine("Internal Error.\nCode: 2");
