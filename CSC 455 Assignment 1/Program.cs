@@ -16,10 +16,13 @@ namespace CSC_455_Assignment_1 {
 			Console.WriteLine("3: List of dinosaurs.\n");
 			Console.WriteLine("4: String class methods.\n");
 
-			var locum = Console.ReadLine();
-			int choice = int.Parse(locum);
-
-			DoMenu(choice);
+			try {
+				var locum = Console.ReadLine();
+				int choice = int.Parse(locum);
+				DoMenu(choice);
+			} catch {
+				Console.Error.WriteLine("Internal Error. Code 2\n");
+			}
 		}
 		private static int RandomNum (int max) {
 			// make random number 1-10 and return it
