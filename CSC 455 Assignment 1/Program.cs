@@ -23,6 +23,7 @@ namespace CSC_455_Assignment_1 {
 		}
 		public static void PrintDate() {
 			// print today's date in MM-DD-YYYY format
+			// this is my preferred method of printing the date
 
 			Console.WriteLine($"{DateTime.Now.ToString("MM-DD-YYYY")}");
 		}
