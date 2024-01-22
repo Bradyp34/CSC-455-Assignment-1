@@ -21,7 +21,8 @@ namespace CSC_455_Assignment_1 {
 				int choice = int.Parse(locum);
 				DoMenu(choice);
 			} catch {
-				Console.Error.WriteLine("Internal Error. Code 2\n");
+				Console.Error.WriteLine("Internal Error. Code 1\n");
+				Console.ReadLine();
 			}
 		}
 		private static int RandomNum (int max) {
